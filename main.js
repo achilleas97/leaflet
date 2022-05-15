@@ -19,7 +19,6 @@ googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
 
 //MARKERS
 var marker = L.marker([40.52,22.2],{
-    draggable: true,
     title: 'Veria city'
 }).addTo(map)
 
@@ -40,5 +39,5 @@ map.on('mousemove',function(e){
     $('.coordinate').html(`Lat: ${e.latlng.lat} Lng: ${e.latlng.lng}`)
 })
 
-//Leaflet measure 
-L.control.measure().addTo(map);
+//Print Map
+L.control.browserPrint().addTo(map);
